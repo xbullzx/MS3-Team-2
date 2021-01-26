@@ -1,0 +1,81 @@
+extends layout
+
+block content
+  .row.banner
+    .col-12
+      h1 Petco
+  .row
+    .col-12.col-lg-9
+      .row
+        .col-12.col-md-6
+          p.rating
+            i.fas.fa-paw
+            i.fas.fa-paw
+            i.fas.fa-paw
+            i.far.fa-paw
+            i.far.fa-paw
+          p 123 Bone dr, Big Bowl, Mo 64333
+          .card.card-primary
+            .card-block
+              h2.card-title Opening hours
+              p.card-text Monday - Friday : 8:00am - 7:00pm
+              p.card-text Saturday - Sunday : 9:00am - 6:00pm
+          .card.card-primary
+            .card-block
+              h2.card-title Facilities
+              span.badge.badge-warning
+                i.fa.fa-check
+                | &nbsp;Pet Food
+              | &nbsp;
+              span.badge.badge-warning
+                i.fa.fa-check
+                | &nbsp;Pet Grooming
+              | &nbsp;
+              span.badge.badge-warning
+                i.fa.fa-check
+                | &nbsp;Veterinarian
+              | &nbsp;
+              span.badge.badge-warning
+                i.fa.fa-check
+                | &nbsp;Veterinarian
+              | &nbsp;
+        .col-12.col-md-6.location-map
+          .card.card-primary
+            .card-block
+              h2.card-title Location map
+              img.img-fluid.rounded(src='https://maps.googleapis.com/maps/api/staticmap?center=51.455041,-0.9690884&zoom=17&size=400x350&sensor=false&markers=51.455041,-0.9690884&scale=2&key=AIzaSyA3mHT7hbqxrqKoi-0roVUIC0KoAfiP0E0')
+      .row
+        .col-12
+          .card.card-primary.review-card
+            .card-block
+              a.btn.btn-primary.float-right(href='/location/review/new') Add review
+              h2.card-title Customer reviews
+              .row.review
+                .col-12.no-gutters.review-header
+                  span.rating
+                    i.fas.fa-star
+                    i.fas.fa-star
+                    i.fas.fa-star
+                    i.far.fa-star
+                    i.far.fa-star
+                  span.reviewAuthor George Brett
+                  small.reviewTimestamp 16 February 2020
+                .col-12
+                  p My dog loves this place.
+              .row.review
+                .col-12.no-gutters.review-header
+                  span.rating
+                    i.fas.fa-star
+                    i.fas.fa-star
+                    i.fas.fa-star
+                    i.far.fa-star
+                    i.far.fa-star
+                  span.reviewAuthor Trainer Joe
+                  small.reviewTimestamp 14 June 2020
+                .col-12
+                  p The training here is pretty good. two thumbs up.
+    .col-12.col-lg-3
+      p.lead
+        | Petco is on FIDO because it has a great selection of pet food, toys, and pet services.
+      p
+        | If you've been and you like it ~ or if you don't ~ please leave a  review to help other people just like you.

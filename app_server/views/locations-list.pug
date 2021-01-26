@@ -1,0 +1,63 @@
+extends layout
+
+block content
+  .row.banner
+    .col-12
+      h1= pageHeader.title
+        small &nbsp;#{pageHeader.strapline}
+
+
+
+  .row
+    .col-12.col-md-8
+      .card
+        .card-block
+          h4
+            a(href='/location') Petco
+            small &nbsp;
+              i.fas.fa-star
+              i.fas.fa-star
+              i.fas.fa-star
+              i.far.fa-star
+              i.far.fa-star
+            span.badge.badge-pill.badge-default.float-right 1.2km
+          p.address 123 Bone dr, Big Bowl, Mo 64333
+          .facilities
+            span.badge.badge-warning Pet Grooming
+            span.badge.badge-warning Veterinarian
+            span.badge.badge-warning Pet Motel
+            span.badge.badge-warning Truck Parking
+      .card
+        .card-block
+          h4
+            a(href='/location') Kate's Canine Resort
+            small &nbsp;
+              i.fas.fa-star
+              i.fas.fa-star
+              i.fas.fa-star
+              i.far.fa-star
+              i.far.fa-star
+            span.badge.badge-pill.badge-default.float-right 1.6km
+          p.address 2823 Main St, Kansas City, MO 64108
+          .facilities
+            span.badge.badge-warning Pet Grooming
+            span.badge.badge-warning Pet Motel
+            span.badge.badge-warning Dog walker
+      .card
+        .card-block
+          h4
+            a(href='/location') KC Pet Food
+            small &nbsp;
+              i.fas.fa-star
+              i.fas.fa-star
+              i.fas.fa-star
+              i.far.fa-star
+              i.far.fa-star
+            span.badge.badge-pill.badge-default.float-right 3.2km
+          p.address 1725 Southwest Blvd, Kansas City, KS 66103
+          .facilities
+            span.badge.badge-warning Wholesale Pricing
+            span.badge.badge-warning Truck Parking
+
+    .col-12.col-md-4
+      p.lead Looking for Trucker friendly locations to fill your pet's needs? FIDO will help you to locate a friendly local pet store, dog park, or emergency medical facilities and a bigTruck parking spot at the same time.

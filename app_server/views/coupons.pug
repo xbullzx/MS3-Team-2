@@ -1,0 +1,42 @@
+extends layout
+
+block content
+  .row.banner
+    .col-12
+      h1= pageHeader.title
+        small &nbsp;#{pageHeader.strapline}
+
+
+
+  .row
+    .col-12.col-md-8
+      .card
+        .card-block
+          h4
+            a(href='/location') Petco
+          p.address 123 Bone dr, Big Bowl, Mo 64333
+          .facilities
+            span.badge.badge-warning 25% off 50lb bags Dog Food
+            span.badge.badge-warning $20 off first Veterinary visit
+            span.badge.badge-warning $5 off Pet Grooming Service
+            span.badge.badge-warning 2 for 1 Premium Cat Food
+      .card
+        .card-block
+          h4
+            a(href='/location') Kate's Canine Resort
+          p.address 2823 Main St, Kansas City, MO 64108
+          .facilities
+            span.badge.badge-warning $10 off first Pet Grooming
+            span.badge.badge-warning 10% off Pet Motel
+            span.badge.badge-warning 5 Dog Walks for $40
+      .card
+        .card-block
+          h4
+            a(href='/location') KC Pet Food
+          p.address 1725 Southwest Blvd, Kansas City, KS 66103
+          .facilities
+            span.badge.badge-warning Always Wholesale Pricing everyday!
+            span.badge.badge-warning Truck Parking
+
+    .col-12.col-md-4
+      p.lead Enjoy these BIG savings coupons for your favorite items!
