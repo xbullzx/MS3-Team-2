@@ -4,8 +4,11 @@ const homelist = (req, res) => {
     title: 'FIDO',
     pageHeader: {
       title: 'FIDO',
-      strapline: "can find places for your pet's needs!"
+      strapline: "can find places for your pet's needs with bigTruck parking!"
     },
+
+    sidebar: "Looking for Trucker friendly locations to fill your pet's needs? FIDO will help you to locate a friendly local pet store, dog park, or emergency medical facilities and a bigTruck parking spot at the same time.",
+
     locations: [{
       name: 'Petco',
       address: '123 Bone dr, Big Bowl, Mo 64333',
