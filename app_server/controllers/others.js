@@ -1,11 +1,27 @@
 /* GET the About page */
 const about = (req, res) => {
-   res.render('generic-text', { title: 'About FIDO' });
- };
-/* GET Pet's list page page */
-const list = (req, res) => {
-  res.render('list-form', { title: 'Pet needs list' });
+  res.render('generic-text',
+    {
+      title: 'About FIDO',
+      content: "FIDO was created to help Truckers find places for your Pet's needs, and a bigTruck parking spot at the same time! work done. Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita eos obcaecati distinctio ipsa, alias laborum sunt reiciendis eius assumenda nostrum voluptatibus excepturi, placeat fugit earum incidunt asperiores quos explicabo?' <br /><br />Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sed lorem ac nisi dignissim accumsan. Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, nihil, ipsa ipsam sequi autem facere ab ullam dolorem perferendis facilis exercitationem illum omnis dicta consequatur quas, at magnam et officia? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique, nostrum deserunt modi sequi in doloremque consectetur. Ad eligendi nihil reprehenderit reiciendis quasi aliquid voluptates quis vitae accusamus magni. Libero, ex!"
+    },
+  );
 };
+
+
+/* GET Pet's list page */
+const list = (req, res) => {
+  res.render('list-form', {
+    title: 'FIDO',
+    pageHeader: {
+      title: 'FIDO'
+    },
+
+    sidebar: "Looking for Trucker friendly locations to fill your pet's needs? FIDO will help you to locate a friendly local pet store, dog park, or emergency medical facilities and a bigTruck parking spot at the same time.",
+  });
+};
+
+
 /* GET Coupons page */
 const discounts = (req, res) => {
   res.render('coupons', {
@@ -44,6 +60,7 @@ const comments = (req, res) => {
   res.render('review-form', { title: 'Leave us a comment' });
 };
 
+/* GET Admin page */
 const admin = (req, res) => {
   res.render('admin', { title: 'Administrator Page' });
 };

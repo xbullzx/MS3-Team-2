@@ -3,7 +3,7 @@ extends layout
 block content
   .row.banner
     .col-12
-      h1 Tell us how we can make FIDO better!!!
+      h1= pageHeader.title
   .row
     .col-12.col-md-7
       form(action="/comments/", method="get", role="form")
@@ -17,3 +17,4 @@ block content
             textarea#review.form-control(name="review", rows="5")
         button.btn.btn-primary.float-right Add my Comments
     .col-12.col-md-4
+	  p.lead= sidebar

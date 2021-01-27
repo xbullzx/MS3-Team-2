@@ -31,18 +31,69 @@ const homelist = (req, res) => {
   });
 };
 
-
-
-
-
 /* GET 'Location info' page */
-const locationInfo = (req, res) => {
-  res.render('location-info', { title: 'Location info' });
-};
 
+const locationInfo = (req, res) => {
+  res.render('location-info',
+    {
+      title: 'Starcups',
+       pageHeader: {
+        title: 'Loc8r',
+      },
+      sidebar: {
+        context: 'is on FIDO because it has a great selection of pet food, toys, and pet services.',
+        callToAction: "If you've been and you like it ~ or if you don't ~ please leave a review to help other people just like you."
+      },
+      location: {
+        name: 'Petco',
+        address: '123 Bone dr, Big Bowl, Mo 64333',
+        rating: 3,
+        facilities: ['Pet Food', 'Pet Grooming', 'Veterinarian', 'Dog Trainer'],
+        coords: {lat: 39.06966493333336, lng: -94.5837033369857},
+        openingTimes: [
+          {
+            days: 'Monday - Friday',
+            opening: '8:00am',
+            closing: '7:00pm',
+            closed: false
+          },
+          {
+            days: 'Saturday',
+            opening: '8:00am',
+            closing: '5:00pm',
+            closed: false
+          },
+          {
+            days: 'Sunday',
+            closed: true
+          }
+        ],
+        reviews: [
+          {
+            author: 'George Brett',
+            rating: 5,
+            timestamp: '16 February 2020',
+            reviewText: 'My Dog Loves this place.'
+          },
+          {
+            author: 'Trainer Joe',
+            rating: 3,
+            timestamp: '16 June 2013',
+            reviewText: 'The training here is pretty good. two thumbs up.'
+          }
+        ]
+      }
+    }
+  );
+};
 /* GET 'Add review' page */
 const addReview = (req, res) => {
-  res.render('location-review-form', { title: 'Add review' });
+  res.render('location-review-form',
+    {
+      title: 'Review Starcups on Loc8r' ,
+      pageHeader: { title: 'Review Starcups' }
+    }
+  );
 };
 
 module.exports = {
