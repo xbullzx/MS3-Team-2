@@ -12,9 +12,9 @@ const about = (req, res) => {
 /* GET Pet's list page */
 const list = (req, res) => {
   res.render('list-form', {
-    title: 'FIDO',
+    title: 'Create a list',
     pageHeader: {
-      title: 'FIDO'
+      title: "Create a list for your Pet's needs."
     },
 
     sidebar: "Looking for Trucker friendly locations to fill your pet's needs? FIDO will help you to locate a friendly local pet store, dog park, or emergency medical facilities and a bigTruck parking spot at the same time.",
@@ -25,7 +25,7 @@ const list = (req, res) => {
 /* GET Coupons page */
 const discounts = (req, res) => {
   res.render('coupons', {
-    title: 'FIDO',
+    title: 'coupons',
     pageHeader: {
       title: 'FIDO',
       strapline: "can find places for your pet's needs with bigTruck parking!"
@@ -57,7 +57,12 @@ const discounts = (req, res) => {
 
 /* GET Leave us a comment page */
 const comments = (req, res) => {
-  res.render('review-form', { title: 'Leave us a comment' });
+  res.render('review-form',
+    {
+      title: 'Leave us a comment' ,
+      pageHeader: { title: 'Tell us how we can make FIDO better!!!' }
+    }
+  );
 };
 
 /* GET Admin page */

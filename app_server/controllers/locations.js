@@ -36,9 +36,9 @@ const homelist = (req, res) => {
 const locationInfo = (req, res) => {
   res.render('location-info',
     {
-      title: 'Starcups',
+      title: 'Petco',
        pageHeader: {
-        title: 'Loc8r',
+        title: 'Petco',
       },
       sidebar: {
         context: 'is on FIDO because it has a great selection of pet food, toys, and pet services.',
