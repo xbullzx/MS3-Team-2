@@ -60,7 +60,9 @@ const comments = (req, res) => {
   res.render('review-form',
     {
       title: 'Leave us a comment' ,
-      pageHeader: { title: 'Tell us how we can make FIDO better!!!' }
+      pageHeader: { title: 'Tell us how we can make FIDO better!!!' },
+	  
+	      sidebar: "How can we make FIDO a better app for your life? Whatever your experience, good or bad, FIDO would be happy to hear from you.",
     }
   );
 };
