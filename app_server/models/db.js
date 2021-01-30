@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 const readLine = require('readline');
 
-let dbURL = 'mongodb://127.0.0.1/MS3-TEAM-2';
+let dbURL = 'mongodb://127.0.0.1/fidodb';
 if (process.env.NODE_ENV === 'production') {
   dbURL = process.env.DB_HOST || process.env.
 MONGODB_URI;
