@@ -33,13 +33,17 @@ router
   .post(ctrlLists.petListCreate)
 router
   .route('/lists/:listid')
+  .get(ctrlLists.petListReadIt)
   .put(ctrlLists.petListUpdate)
   .delete(ctrlLists.petListDelete)
 
   // Leave us a Comment //
-  router
+router
   .route('/comments/')
   .post(ctrlComments.commentsCreate)
+router
+  .route('/comments/:commentid')
+  .get(ctrlComments.commentsRead)
   .delete(ctrlComments.commentsDelete);
 
 module.exports = router;
