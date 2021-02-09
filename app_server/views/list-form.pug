@@ -1,0 +1,22 @@
+extends layout
+
+block content
+  .row.banner
+    .col-12
+      h1= pageHeader.title
+        small &nbsp;#{pageHeader.strapline}
+    a.btn.btn-primary.float-right(href='/list/') Edit my List
+  .row
+    .col-12.col-md-7
+      form(action="/location", method="get", role="form")
+        .form-group.row
+          label.col-10.col-sm-2.col-form-label(for="name") Name
+          .col-12.col-sm-10
+            input#name.form-control(name="name")
+        .form-group.row
+          label.col-sm-2.col-form-label(for="list") Needs List
+          .col-sm-10
+            textarea#review.form-control(name="list", rows="8")
+        a.btn.btn-primary.float-right(href='/list/') Save My List
+    .col-12.col-md-4
+      p.lead= sidebar

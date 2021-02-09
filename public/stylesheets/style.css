@@ -1,0 +1,119 @@
+@import url("//fonts.googleapis.com/css?family=Lobster|Cabin:400,700");
+
+    h1, h2, h3, h4, h5, h6 {
+    font-family: 'system-ui';
+}
+
+legend {
+    font-family: 'system-ui';
+}
+
+.navbar {
+    background-color: #1b01ff;
+    border-color: rgb(255, 255, 255);
+}
+
+.navbar-light .navbar-brand {
+    font-family: 'system-ui';
+    color: rgba(250, 250, 250, 0.8);
+}
+
+a.navbar-brand {
+    font-family: 'system-ui';
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.navbar-light .navbar-toggler {
+    color: white;
+    border-color: transparent;
+}
+
+.navbar-toggler-iconn {
+    color: white;
+}
+.navbar-light .navbar-toggler-icon {
+    background-image: url("data:image/svgxml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='white' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E")
+}
+
+.navbar-light .navbar-nav .nav-link, .navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-link:hover {
+    color: rgb(248, 248, 248);
+}
+.card {
+  background-color: #c0c0c0;
+  padding: 1rem;
+  border-bottom-width: 2ex;
+  
+}
+
+.card-primary {
+  border-color: #ffffff;
+  margin-bottom: 0.5rem;
+}
+
+.banner {
+  margin-top: 4em;
+  border-bottom: 1px solid #1b01ff;
+  margin-bottom: 1.5em;
+  padding-bottom: 0.5em;
+}
+
+.review-header {
+  background-color: #1b01ff;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+.review {
+  margin-right: -16px;
+  margin-left: -16px;
+  margin-bottom: 0.5em;
+}
+
+.badge-default, .btn-primary {
+  background-color: #1b01ff;
+  border-color: #000000;
+}
+
+h4 a, h4 a:hover {
+  color: rgb(255, 255, 255);
+}
+
+h4 small {
+  font-size: 60%;
+  line-height: 200%;
+  color: rgba(255, 22, 236, 0.8);
+}
+
+h1 small {
+  color: rgb(0, 0, 0);
+}
+
+.address {
+  margin-bottom: 0.5rem;
+}
+
+.facilities span.badge {
+  margin-right: 2px;
+}
+
+p {
+  margin-bottom: 0.65rem;
+}
+
+a {
+  color: rgba(255, 255, 255, 0.8)
+}
+
+  a:hover {
+      color: #fff
+  }
+
+body {
+  font-family: "Cabin", Arial, sans-serif;
+  color: rgba(0, 0, 0, 0.8);
+  background-color: #ffffff;
+}
+
+
+
