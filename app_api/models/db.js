@@ -68,5 +68,6 @@ process.on('SIGTERM', () => {
 connect();
 
 require('./locations');
-require('./lists')
+require('./users');
+require('./lists');
 require('./comments');
