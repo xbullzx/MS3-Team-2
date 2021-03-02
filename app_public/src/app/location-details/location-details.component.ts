@@ -1,19 +1,74 @@
 import { Component, OnInit, Input } from '@angular/core';
-
+import { Location, Review } from '../location';
+import { FidoDataService } from '../fido-data.service';
+import { AuthenticationService } from '../authentication.service';
 
 @Component({
   selector: 'app-location-details',
   templateUrl: './location-details.component.html',
   styleUrls: ['./location-details.component.css']
 })
-
-
 export class LocationDetailsComponent implements OnInit {
 
-  constructor() { }
+  @Input() location: Location;
 
-  ngOnInit(): void {
+  public newReview: Review = {
+    author: '',
+    rating: 5,
+    reviewText: ''
+  };
+
+  public formVisible: boolean = false;
+  public formError: string;
+
+  public googleAPIKey: string = 'AIzaSyA3mHT7hbqxrqKoi-0roVUIC0KoAfiP0E0';
+
+  constructor(
+    private FidoDataService: FidoDataService,
+    private authenticationService: AuthenticationService
+  ) { }
+
+  ngOnInit() {
   }
 
-}
+  private formIsValid(): boolean {
+    if (this.newReview.author && this.newReview.rating && this.newReview.reviewText) 
+{
+      return true;
+    } else {
+      return false;
+    }
+  }
 
+  public onReviewSubmit(): void {
+    this.formError = '';
+    this.newReview.author = this.getUsername();
+    if (this.formIsValid()) {
+      this.FidoDataService.addReviewByLocationId(this.location._id, this.newReview)
+        .then((review: Review) => {
+          let reviews = this.location.reviews.slice(0);
+          reviews.unshift(review);
+          this.location.reviews = reviews;
+          this.resetAndHideReviewForm();
+        });
+    } else {
+      this.formError = 'All fields requried, please try again';
+    }
+  }
+
+  private resetAndHideReviewForm(): void {
+    this.formVisible = false;
+    this.newReview.author = '';
+    this.newReview.rating = 5;
+    this.newReview.reviewText = '';
+  }
+
+  public isLoggedIn(): boolean {
+    return this.authenticationService.isLoggedIn();
+  }
+
+  public getUsername(): string {
+    const { name } = this.authenticationService.getCurrentUser();
+    return name ? name : 'Guest';
+  }
+}

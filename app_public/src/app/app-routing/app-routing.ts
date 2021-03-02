@@ -23,11 +23,11 @@ const routes: Routes = [
     component: LocationDetailsComponent
  },
  {
-   path: 'list',
+   path: 'register',
     component: RegisterComponent
   },
   {
-    path: 'comments',
+    path: 'login',
     component: LoginComponent
   }
 ];

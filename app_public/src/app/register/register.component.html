@@ -1,49 +1,26 @@
-<div class="page-content page-container" id="page-content">
-  <div class="padding">
-    <div class="row container d-flex justify-content-center">
-      <div class="col-md-12">
-        <div class="card px-3">
-          <div class="card-body">
-            <h4 class="card-title">Awesome Pet list</h4>
-            <img src="assets\images\cat.jpg" width="130" height="130" class="d-inline-block align-top rounded-circle"
-              alt="">
-            <div class="add-items d-flex"> <input type="text" class="form-control todo-list-input"
-                placeholder="What do you need to do today?"> <button
-                class="add btn btn-primary font-weight-bold todo-list-add-btn">Add</button> </div>
-            <div class="list-wrapper">
-              <ul class="d-flex flex-column-reverse todo-list">
-                <li>
-                  <div class="form-check"> <label class="form-check-label"> <input class="checkbox" type="checkbox"> <i
-                        class="input-helper"></i></label> </div> <i class="remove mdi mdi-close-circle-outline"></i>
-                </li>
-                <li class="completed">
-                  <div class="form-check"> <label class="form-check-label"> <input class="checkbox" type="checkbox"
-                        checked=""> <i class="input-helper"></i></label> </div> <i
-                    class="remove mdi mdi-close-circle-outline"></i>
-                </li>
-                <li>
-                  <div class="form-check"> <label class="form-check-label"> <input class="checkbox" type="checkbox"> <i
-                        class="input-helper"></i></label> </div>
-                  <i class="remove mdi mdi-close-circle-outline"></i>
-                </li>
-                <li>
-                  <div class="form-check"> <label class="form-check-label"> <input class="checkbox" type="checkbox">
-                      <i class="input-helper"></i></label> </div> <i class="remove mdi mdi-close-circle-outline"></i>
-                </li>
-                <li class="completed">
-                  <div class="form-check"> <label class="form-check-label"> <input class="checkbox" type="checkbox"
-                        checked=""> <i class="input-helper"></i></label> </div> <i
-                    class="remove mdi mdi-close-circle-outline"></i>
-                </li>
-                <li>
-                  <div class="form-check"> <label class="form-check-label"> <input class="checkbox" type="checkbox">
-                      <i class="input-helper"></i></label> </div> <i class="remove mdi mdi-close-circle-outline"></i>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
+<app-page-header [content]="pageContent.header"></app-page-header>
+<div class="row">
+  <div class="col-12 col-md-8">
+    <p class="lead">Already a member? Please <a routerLink="/login">
+    Log In</a> instead</p>
+    <form (submit)="onRegisterSubmit()">
+      <div role="alert" *ngIf="formError" class="alert alert-danger">
+      {{ formError }}</div>
+      <div class="form-group">
+        <label for="name">Full Name</label>
+        <input class="form-control" id="name" name="name" placeholder="Enter your name" [(ngModel)]="credentials.name">
       </div>
-    </div>
+      <div class="form-group">
+        <label for="email">Email Address</label>
+        <input type="email" class="form-control" id="email" name="email" placeholder="Enter email address" [(ngModel)]="credentials.email">
+      </div>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="pasword" class="form-control" id="password" name="password" placeholder="e.g 12+ alphanumerics" [(ngModel)]="credentials.password">
+      </div>
+      <button type="submit" role="button" class="btn btn-primary">Register!</button>
+    </form>
   </div>
+  <!-- <app-sidebar [content]="pageContent.sidebar"  class="col-12 col-md-4"></ --><!-- app-sidebar> -->
 </div>
+
