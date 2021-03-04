@@ -7,6 +7,8 @@ import { HomepageComponent } from '../homepage/homepage.component';
 import { LocationDetailsComponent } from '../location-details/location-details.component';
 import { RegisterComponent } from '../register/register.component';
 import { LoginComponent } from '../login/login.component';
+import { LocationsManagementComponent } from '../locations-management/locations-management.component';
+import { LocationInfoComponent } from '../location-info/location-info.component'
 
 
 const routes: Routes = [
@@ -19,7 +21,7 @@ const routes: Routes = [
     component: AboutComponent
   },
 {
-    path: 'coupons',
+    path: 'location/:locationId',
     component: LocationDetailsComponent
  },
  {
@@ -29,6 +31,14 @@ const routes: Routes = [
   {
     path: 'login',
     component: LoginComponent
+  },
+  {
+    path: 'admin',
+    component: LocationsManagementComponent,
+  },
+  {
+    path: 'admin/newLocation',
+    component: LocationInfoComponent
   }
 ];
 

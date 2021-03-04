@@ -32,7 +32,25 @@ maxDistance=${maxDistance}`;
     return this.http
       .get(url)
       .toPromise()
-      .then(response => response as Location)
+      .then(response => response as Location)      
+      .catch(this.handleError);
+  }
+
+  public deleteLocationById(locationId: string): Promise<Location> {
+    const url: string = `${this.apiBaseUrl}/locations/${locationId}`;
+    return this.http
+      .delete(url)
+      .toPromise()
+      .then(response => response as Location)      
+      .catch(this.handleError);
+  }
+
+  public createLocation(formData: any): Promise<Location> {
+    const url: string = `${this.apiBaseUrl}/locations`;
+    return this.http
+      .post(url, formData)
+      .toPromise()
+      .then(response => response as any)      
       .catch(this.handleError);
   }
 

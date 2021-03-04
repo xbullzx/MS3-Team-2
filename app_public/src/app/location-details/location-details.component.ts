@@ -1,7 +1,10 @@
+import { ActivatedRoute, ParamMap } from '@angular/router';
 import { Component, OnInit, Input } from '@angular/core';
 import { Location, Review } from '../location';
 import { FidoDataService } from '../fido-data.service';
 import { AuthenticationService } from '../authentication.service';
+import { switchMap } from 'rxjs/operators'
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-location-details',
@@ -24,12 +27,27 @@ export class LocationDetailsComponent implements OnInit {
   public googleAPIKey: string = 'AIzaSyA3mHT7hbqxrqKoi-0roVUIC0KoAfiP0E0';
 
   constructor(
-    private FidoDataService: FidoDataService,
-    private authenticationService: AuthenticationService
+    private fidoDataService: FidoDataService,
+    private authenticationService: AuthenticationService, 
+    private route: ActivatedRoute
   ) { }
 
-  ngOnInit() {
+
+  newLocation: Location;
+
+  ngOnInit(): void {
+    this.route.paramMap
+      .pipe(
+        switchMap((params: ParamMap) => {
+           let id = params.get('locationId');
+           return this.fidoDataService.getLocationById(id);
+         })
+      )
+      .subscribe((newLocation: Location) => {
+        this.newLocation = newLocation;
+      });
   }
+
 
   private formIsValid(): boolean {
     if (this.newReview.author && this.newReview.rating && this.newReview.reviewText) 
@@ -44,11 +62,11 @@ export class LocationDetailsComponent implements OnInit {
     this.formError = '';
     this.newReview.author = this.getUsername();
     if (this.formIsValid()) {
-      this.FidoDataService.addReviewByLocationId(this.location._id, this.newReview)
+      this.fidoDataService.addReviewByLocationId(this.newLocation._id, this.newReview)
         .then((review: Review) => {
-          let reviews = this.location.reviews.slice(0);
-          reviews.unshift(review);
-          this.location.reviews = reviews;
+          //let reviews = this.newLocation.reviews.slice(0);
+          //reviews.unshift(review);
+          //this.newLocation.reviews = reviews;
           this.resetAndHideReviewForm();
         });
     } else {

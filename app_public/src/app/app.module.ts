@@ -14,6 +14,11 @@ import { LocationDetailsComponent } from './location-details/location-details.co
 import { RegisterComponent } from './register/register.component'
 import { LoginComponent } from './login/login.component';
 import { FooterComponent } from './footer/footer.component';
+import { LocationInfoComponent } from './location-info/location-info.component';
+import { LocationsManagementComponent } from './locations-management/locations-management.component';
+import { MostRecentFirstPipe } from './most-recent-first.pipe';
+import { RatingStarsComponent } from './rating-stars/rating-stars.component';
+import { HtmlLineBreaksPipe }  from './html-line-breaks.pipe';
 
 @NgModule({
   declarations: [
@@ -26,7 +31,12 @@ import { FooterComponent } from './footer/footer.component';
     LocationDetailsComponent,
     RegisterComponent,
     LoginComponent,
-    FooterComponent
+    FooterComponent,
+    LocationInfoComponent,
+    LocationsManagementComponent,
+    MostRecentFirstPipe,
+    RatingStarsComponent,
+    HtmlLineBreaksPipe
   ],
   imports: [
     BrowserModule,

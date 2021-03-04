@@ -54,3 +54,12 @@ body {
   .navbar-nav li a:hover {
     color: #fbff00 !important;
   }
+
+  .fa-trash {
+    background-color: transparent;
+    border: none;
+  }
+
+  .fa-trash:hover {
+    color: rgb(176, 171, 171);
+  }

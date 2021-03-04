@@ -1,0 +1,32 @@
+<div class="row">
+  <span style="float: right">
+  <a routerLink="newLocation">
+  <button class="btn btn-success">
+    Create New Location
+  </button>
+</a>
+</span>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Address</th>
+      <th style="text-align: center">Delete Location</th>
+    </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let location of locations; let i = index">
+    <td>
+      <h4>{{location.name}}</h4>
+    </td>
+    <td>
+      {{location.address}}
+    </td>
+    <td style="text-align: center">
+      <button class="fas fa-trash" (click)="locationDeleteById(i)"></button>
+    </td>
+  </tr>
+</tbody>
+</table>
+
+</div>
