@@ -4,6 +4,7 @@ import { Location, Review } from './location';
 import { User } from './user';
 import { AuthResponse } from './authresponse';
 import { BROWSER_STORAGE } from './storage';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
@@ -14,7 +15,7 @@ export class FidoDataService {
     private http: HttpClient,
     @Inject(BROWSER_STORAGE) private storage: Storage) { }
 
-  private apiBaseUrl = 'http://localhost:3000/api';
+  private apiBaseUrl = environment.apiBaseUrl;
 
   public getLocations(lat: number, lng: number): Promise<Location[]> {
     const maxDistance: number = 20000;
