@@ -1,76 +1,78 @@
 <div class="newLocation">
   <form (ngSubmit)="newLocationSubmit()" class="form-inline">
-    <h4>Create new location</h4>
+    <h2 class="h4-margin">Create new location</h2>
     <div *ngIf="formError" class="alter alert-danger" role="alert">
       {{formError}}
     </div>
-    <div class="form-group row col-12">
-      <label for="name" class="col-5">Location name</label>
-      <input id="name" name="name" required="required" class="form-col-5 control input -small" [(ngModel)]="newLocation.name">
+    <div class="form-group row col-12 div-height">
+      <div class="label-div"><label for="name" >Location name</label></div>
+      <div class="col-5 textbox-div"><input id="name" name="name" required="required" class="form-control input -small" [(ngModel)]="newLocation.name"></div>
     </div>
-    <div class="form-group row col-12">
-      <label for="address" class="col-5">Address</label>
-      <input id="address" name="address" required="required" class="col-5 form-control  
-      input-small" [(ngModel)]="newLocation.address">
+    <div class="form-group row col-12 div-height">
+      <div class="label-div"><label for="address">Address</label></div>
+      <div class="col-5 textbox-div">
+      <input id="address" name="address" required="required" class=" form-control  input-small" [(ngModel)]="newLocation.address"></div>
     </div>
-    <div class="form-group row col-12">
-      <label for="facilites" class="col-5">Facilites</label>
-      <input id="facilites" name="facilites" required="required" class="col-5 form-control  
-      input-small" [(ngModel)]="newLocation.facilites">
+    <div class="form-group row col-12 div-height">
+      <div class="label-div"><label for="facilities">Facilities</label></div>
+      <div class="col-5 textbox-div">
+      <input id="facilities" name="facilities" required="required" class=" form-control  input-small" [(ngModel)]="newLocation.facilities"></div>
     </div>
-    <div class="form-group row col-12">
-      <label for="longitude" class="col-5">Longitude</label>
-      <input id="longitude" name="longitude" required="required" class="col-5 form-control  
-      input-small" [(ngModel)]="newLocation.lng">
+    <div class="form-group row col-12 div-height">
+      <div class="label-div"><label for="longitude">Longitude</label></div>
+      <div class="col-5 textbox-div">
+      <input id="longitude" name="longitude" required="required" class=" form-control  input-small" [(ngModel)]="newLocation.lng"></div>
     </div>
-    <div class="form-group row col-12">
-      <label for="latitude" class="col-5">Latitude</label>
-      <input id="latitude" name="latitude" required="required" class="col-5 form-control  
-      input-small" [(ngModel)]="newLocation.lat">
+    <div class="form-group row col-12 div-height">
+      <div class="label-div"><label for="latitude">Latitude</label></div>
+      <div class="col-5 textbox-div">
+      <input id="latitude" name="latitude" required="required" class=" form-control  input-small" [(ngModel)]="newLocation.lat"></div>
+    </div> 
+    <div class="form-group row col-12 div-height">
+      <div class="label-div"><label for="days1">Days 1</label></div>
+      <div class="col-5 textbox-div">
+      <input id="days1" name="days1" required="required" class=" form-control  
+      input-small" [(ngModel)]="newLocation.days1"></div>
     </div>
-    <div class="form-group row col-12">
-      <label for="days1" class="col-5">Days 1</label>
-      <input id="days1" name="days1" required="required" class="col-5 form-control  
-      input-small" [(ngModel)]="newLocation.days1">
+    <div class="form-group row col-12 div-height">
+      <div class="label-div"><label for="opening1">Opening 1</label></div>
+      <div class="col-5 textbox-div">
+      <input id="opening1" name="opening1" required="required" class=" form-control  input-small" [(ngModel)]="newLocation.opening1"></div>
     </div>
-    <div class="form-group row col-12">
-      <label for="openings1" class="col-5">Opening 1</label>
-      <input id="openings1" name="openings1" required="required" class="col-5 form-control  
-      input-small" [(ngModel)]="newLocation.openings1">
+    <div class="form-group row col-12 div-height">
+      <div class="label-div"><label for="closing1">Closing 1</label></div>
+      <div class="col-5 textbox-div">
+      <input id="closing1" name="closing1" required="required" class="
+       form-control  input-small" [(ngModel)]="newLocation.closing1"></div>
     </div>
-    <div class="form-group row col-12">
-      <label for="closing1" class="col-5">Closing 1</label>
-      <input id="closing1" name="closing1" required="required" class="col-5 form-control  
-      input-small" [(ngModel)]="newLocation.closing1">
+    <div class="form-group row col-12 div-height">
+      <div class="label-div"><label for="closed1">Closed 1</label></div>
+      <div class="col-5 textbox-div">
+      <input id="closed1" name="closed1" required="required" class=" form-control  input-small" [(ngModel)]="newLocation.closed1"></div>
     </div>
-    <div class="form-group row col-12">
-      <label for="closed1" class="col-5">Closed 1</label>
-      <input id="closed1" name="closed1" required="required" class="col-5 form-control  
-      input-small" [(ngModel)]="newLocation.closed1">
+    <div class="form-group row col-12 div-height">
+      <div class="label-div"><label for="days2">Days 2</label></div>
+      <div class="col-5 textbox-div">
+      <input id="days2" name="days2" required="required" class=" form-control  input-small" [(ngModel)]="newLocation.days2"></div>
     </div>
-    <div class="form-group row col-12">
-      <label for="days2" class="col-5">Days 2</label>
-      <input id="days2" name="days2" required="required" class="col-5 form-control  
-      input-small" [(ngModel)]="newLocation.days2">
+    <div class="form-group row col-12 div-height">
+      <div class="label-div"><label for="opening2">Opening 2</label></div>
+      <div class="col-5 textbox-div">
+      <input id="opening2" name="opening2" required="required" class=" form-control  input-small" [(ngModel)]="newLocation.opening2"></div>
     </div>
-    <div class="form-group row col-12">
-      <label for="openings2" class="col-5">Openings 2</label>
-      <input id="openings2" name="openings2" required="required" class="col-5 form-control  
-      input-small" [(ngModel)]="newLocation.openings2">
-    </div>
-    <div class="form-group row col-12">
-      <label for="closing2" class="col-5">Closing 2</label>
-      <input id="closing2" name="closing2" required="required" class="col-5 form-control  
-      input-small" [(ngModel)]="newLocation.closing2">
-    </div>
-    <div class="form-group row col-12">
-      <label for="closed2" class="col-5">Closed 2</label>
-      <input id="closed2" name="closed2" required="required" class="col-5 form-control  
-      input-small" [(ngModel)]="newLocation.closed2">
+    <div class="form-group row col-12 div-height">
+      <div class="label-div"><label for="closing2">Closing 2</label></div>
+      <div class="col-5 textbox-div">
+      <input id="closing2" name="closing2" required="required" class=" form-control  input-small" [(ngModel)]="newLocation.closing2"></div>
+    </div> 
+    <div class="form-group row col-12 div-height">
+      <div class="label-div"><label for="closed2">Closed 2</label></div>
+      <div class="col-5 textbox-div">
+      <input id="closed2" name="closed2" required="required" class=" form-control  input-small" [(ngModel)]="newLocation.closed2"></div>
     </div>
     <div class="col-12">
       <button type="submit" class="btn btn-primary float-right" style="margin-left: 15px">Add Location</button>
-      <button type="button" class="btn btn-danger float-right"><a routerLink="/admin">Cancel</a></button>
+      <button type="button" class="btn btn-danger float-right cancel-font"><a routerLink="/admin">Cancel</a></button>
     </div>
   </form>
 </div>

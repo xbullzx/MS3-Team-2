@@ -6,18 +6,13 @@
     <h3>Looking for Trucker friendly locations to fill your pet's needs? FIDO will help you to locate a friendly local pet store, dog park, or emergency medical facilities and a bigTruck parking spot at the same time.</h3>
 </div>
 
-<!-- Second Container -->
-<div class="container-fluid bg-2 text-center">
-    <h3 class="margin">LIST</h3>
-    <p>Create a list for your pet's needs</p>
-    <a href="list" class="btn btn-default btn-lg">
-        <i class="fas fa-edit"></i> CREATE YOUR LIST
-    </a>
-</div>
-
 <!-- Third Container (Grid) -->
-    <div class="row"*ngFor="let location of locations">
-        <div class="col-sm-4"><h2><a routerLink="/location/{{location._id}}">{{location.name}}</a></h2></div>
+    <div class="row margin-list"*ngFor="let location of locations; let i=index">
+        <div class="division-div">
+        <div><h2><a routerLink="/location/{{location._id}}">{{location.name}}</a></h2></div>
         <div> <h3>Services: {{location.facilities}}</h3></div>
-        <div><img src="assets/images/pets1.jpg" class="img-responsive margin" style="width:15%" alt="Photo of two dogs"></div>
+        </div>
+        <div class="second-div"><img src="{{images[i]}}" class="img-responsive margin" 
+            style="width:15%" alt="Photo of two dogs"></div>
+        
     </div>

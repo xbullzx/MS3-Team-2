@@ -1,3 +1,14 @@
+@import url("//fonts.googleapis.com/css?family=Lobster|Cabin:400,700");
+
+    h1, h2, h3, h4, h5, h6 {
+    font-family: 'Lobster', cursive;
+}
+
+legend {
+  font-family: 'Lobster', cursive;
+}
+
+
 body {
     font: 20px Montserrat, sans-serif;
     line-height: 1.8;
@@ -13,7 +24,7 @@ body {
   }
 
   .bg-1 {
-    background-color: #1a6ebc;
+    background-color: #b5b5b5;
 
     color: #ffffff;
   }
@@ -42,6 +53,7 @@ body {
   }
 
   .navbar {
+    color:rgb(173, 240, 231)
     padding-top: 15px;
     padding-bottom: 15px;
     border: 0;
@@ -52,5 +64,15 @@ body {
   }
 
   .navbar-nav li a:hover {
-    color: #fbff00 !important;
+    /* color: #fbff00 !important; */
+    text-decoration: underline;
+  }
+
+  .fa-trash {
+    background-color: transparent;
+    border: none;
+  }
+
+  .fa-trash:hover {
+    color: rgb(176, 171, 171);
   }

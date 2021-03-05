@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Router } from '@angular/router'
+import { AuthenticationService } from '../authentication.service'
 import { FidoDataService } from '../fido-data.service'
 import { Location } from '../location'
 
@@ -54,10 +55,14 @@ export class LocationInfoComponent implements OnInit {
 
   constructor(
     private fidoDataService: FidoDataService,
-    private router: Router
+    private router: Router,
+    private authenticationService: AuthenticationService,
   ) {}
 
   ngOnInit(): void {
+    if (!this.authenticationService.isLoggedIn()) {
+      this.router.navigate(['login'])
+    }
   }
 
 }

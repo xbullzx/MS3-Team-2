@@ -1,0 +1,31 @@
+.label-div{
+  height: 20px;
+  float: left;
+  width: 38%;
+}
+.label-div label{
+  align-items: left !important;
+}
+.textbox-div{
+  position: absolute;
+margin-left: 30%;
+}
+.div-height{
+  height: 50px;;
+}
+.h4-margin{
+  margin-left: 45%;
+  margin-bottom: 10px;  
+}
+.newLocation{
+  background-color: #b1f4fa;
+}
+.cancel-font{
+  color: white;
+  text-decoration: none;
+}
+
+.cancel-font a{
+  color: white;
+  text-decoration: none;
+}

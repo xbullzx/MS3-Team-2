@@ -69,6 +69,7 @@ export class LocationDetailsComponent implements OnInit {
           //this.newLocation.reviews = reviews;
           this.resetAndHideReviewForm();
         });
+        
     } else {
       this.formError = 'All fields requried, please try again';
     }
@@ -79,6 +80,7 @@ export class LocationDetailsComponent implements OnInit {
     this.newReview.author = '';
     this.newReview.rating = 5;
     this.newReview.reviewText = '';
+    window.location.reload();
   }
 
   public isLoggedIn(): boolean {

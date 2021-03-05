@@ -19,6 +19,9 @@ export class HomeListComponent implements OnInit {
 
   public locations: Location[]
   public message: string
+  public images: string[] = ["assets/images/happydog.jpg", "assets/images/travel.jpg", "assets/images/greeneye.jpg", "assets/images/pixabay.jpg", "assets/images/dogandbone.jpg", "assets/images/sleep.jpg", "assets/images/chewdog.jpg",]
+
+
 
   private getLocations (position:any):void{
     this.message='searching for nearby places';

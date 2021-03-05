@@ -1,0 +1,24 @@
+.span-margin{
+  margin-right: 5px;
+  margin-bottom: 10px;
+}
+.reviewAuthor{
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.row-margin{
+  margin-top : 20px;
+}
+.review-margin{
+  margin-top:10px; 
+  margin-right: 10px;  
+}
+.bg-color{
+  background-color: #b1f4fa;
+}
+.hrs-margin{
+  margin-bottom: 10px;
+}
+.card-block{
+  padding: 10px;
+}

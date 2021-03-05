@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import {FidoDataService } from '../fido-data.service';
-import {GeolocationService} from '../geolocation.service';
-import {Location} from '../location';
+import { Router } from '@angular/router'
+import { FidoDataService } from '../fido-data.service';
+import { GeolocationService } from '../geolocation.service';
+import { AuthenticationService } from '../authentication.service'
+import { Location } from '../location';
 
 
 @Component({
@@ -13,7 +15,9 @@ export class LocationsManagementComponent implements OnInit {
 
   constructor( 
     private fidoDataService: FidoDataService,
-    private geolocationService: GeolocationService
+    private geolocationService: GeolocationService,
+    private authenticationService: AuthenticationService,
+    private router: Router
     ) {}
 
   public locations: Location[]
@@ -57,7 +61,12 @@ export class LocationsManagementComponent implements OnInit {
     }
   }
 
-  ngOnInit(): void {this.getPosition();
+  ngOnInit(): void {
+    if (this.authenticationService.isLoggedIn()) {
+    this.getPosition();
+    } else {
+      this.router.navigate(['login'])
+    }
 
   }
 
